@@ -1,6 +1,6 @@
 <?php
 
-require('../database/dbconnect.php');
+require('../global/database/dbconnect.php');
 
 ?>
 
@@ -18,26 +18,43 @@ require('../database/dbconnect.php');
 </head>
 <body>
 
-<div class="flex-container">
-    <div class="box-header">
-        <p>Login</p>
-    </div>
-    <div class="box">
+<?php
 
-        <div class="box-content">
-            <form>
-                <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                    <label for="pass">Password</label>
-                    <input type="password" class="form-control" id="pass" placeholder="Password">
-                </div>
-                <br>
-                <button type="submit" class="btn btn-primary">Login</button>
-                <a class="btn btn-secondary" href="../register/index.php" role="button">Register</a>
-            </form>
+    if (isset($_GET['error'])) {
+        if ($_GET['error'] == 1) {
+            require_once('inc/modals/modal_error.php');
+        }
+    }
+
+?>
+
+
+
+<div class="container">
+    <div class="logo">
+        <img src="../global/images/logo.png" alt="Logo" width="150em" height="150em">
+    </div>
+    <div class="flex-container">
+        <div class="box-header">
+            <p>Login</p>
+        </div>
+        <div class="box">
+
+            <div class="box-content">
+                <form action="login_handle.php" method="POST">
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pass">Password</label>
+                        <input type="password" class="form-control" id="pass" placeholder="Password" name="pass" required>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary" name="submit">Login</button>
+                    <a class="btn btn-secondary" href="../register/index.php" role="button">Register</a>
+                </form>
+            </div>
         </div>
     </div>
 </div>

@@ -1,6 +1,6 @@
 <?php
 
-require('../database/dbconnect.php');
+require('../global/database/dbconnect.php');
 
 ?>
 
@@ -38,50 +38,55 @@ require('../database/dbconnect.php');
     </div>
 </body>
 
-<div class="flex-container">
-    <div class="box-header">
-        <p>Register</p>
+<div class="container">
+    <div class="logo">
+        <img src="../global/images/logo.png" alt="Logo" width="150em" height="150em">
     </div>
-    <div class="box">
+    <div class="flex-container">
+        <div class="box-header">
+            <p>Register</p>
+        </div>
+        <div class="box">
 
-        <div class="box-content">
-            <form>
-                <div class="row">
-                   <div class="col">
-                        <div class="form-group">
-                            <label for="firstName">First Name</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="First Name">
-                        </div>
-                    </div>
+            <div class="box-content">
+                <form>
+                    <div class="row">
                     <div class="col">
-                        <div class="form-group">
-                            <label for="lastName">Last Name</label>
-                            <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter email">
-                </div>
-                <div class="row">
-                   <div class="col">
-                        <div class="form-group">
-                            <label for="pass">Password</label>
-                            <input type="password" class="form-control" id="pass" placeholder="Password">
-                        </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email">
                     </div>
+                    <div class="row">
                     <div class="col">
-                        <div class="form-group">
-                            <label for="passRepeat">Repeat Password</label>
-                            <input type="password" class="form-control" id="passRepeat" placeholder="Password">
+                            <div class="form-group">
+                                <label for="pass">Password</label>
+                                <input type="password" class="form-control" id="pass" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="passRepeat">Repeat Password</label>
+                                <input type="password" class="form-control" id="passRepeat" placeholder="Password">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <br>
-                <button type="submit" class="btn btn-primary">Register</button>
-                <p>Already have an account? Login <a href="../login/index.php">Here</a>!</p>
-            </form>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                    <p>Already have an account? Login <a href="../login/index.php">Here</a>!</p>
+                </form>
+            </div>
         </div>
     </div>
 </div>
