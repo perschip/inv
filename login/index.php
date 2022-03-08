@@ -1,6 +1,6 @@
 <?php
 
-require('../inc/files/database/dbconnect.php');
+require('../database/dbconnect.php');
 
 ?>
 
@@ -36,7 +36,7 @@ require('../inc/files/database/dbconnect.php');
                 </div>
                 <br>
                 <button type="submit" class="btn btn-primary">Login</button>
-                <a class="btn btn-secondary" href="/register/index.php" role="button">Register</a>
+                <a class="btn btn-secondary" href="../register/index.php" role="button">Register</a>
             </form>
         </div>
     </div>
